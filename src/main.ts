@@ -10,7 +10,10 @@ if (!args.length) {
 
 async function addGuard(file: string) {
   const pathComponents = file.split('/').filter((s) => !s.startsWith('.'));
-  const guardName = pathComponents.join('_').toUpperCase().replace('.', '_');
+  const guardName = `${pathComponents
+    .join('_')
+    .toUpperCase()
+    .replace('.', '_')}_`;
 
   const content = await fsPromises.readFile(file, 'utf8');
   const lines = content.split(/\r?\n/);

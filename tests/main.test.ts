@@ -13,23 +13,23 @@ it('Relative to root', async () => {
     src: {
       a: {
         b: {
-          'leaf.h': `#ifndef SRC_A_B_LEAF_H
-#define SRC_A_B_LEAF_H
+          'leaf.h': `#ifndef SRC_A_B_LEAF_H_
+#define SRC_A_B_LEAF_H_
 
 code
 
-#endif // SRC_A_B_LEAF_H
+#endif // SRC_A_B_LEAF_H_
 `,
         },
       },
       'root.h': `// comment
 
-#ifndef SRC_ROOT_H
-#define SRC_ROOT_H
+#ifndef SRC_ROOT_H_
+#define SRC_ROOT_H_
 
 code
 
-#endif // SRC_ROOT_H
+#endif // SRC_ROOT_H_
 `,
     },
   });
@@ -44,23 +44,23 @@ it('Relative to src', async () => {
     src: {
       a: {
         b: {
-          'leaf.h': `#ifndef A_B_LEAF_H
-#define A_B_LEAF_H
+          'leaf.h': `#ifndef A_B_LEAF_H_
+#define A_B_LEAF_H_
 
 code
 
-#endif // A_B_LEAF_H
+#endif // A_B_LEAF_H_
 `,
         },
       },
       'root.h': `// comment
 
-#ifndef ROOT_H
-#define ROOT_H
+#ifndef ROOT_H_
+#define ROOT_H_
 
 code
 
-#endif // ROOT_H
+#endif // ROOT_H_
 `,
     },
   });
